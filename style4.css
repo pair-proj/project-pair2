@@ -1,0 +1,31 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  #name-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px; 
+  }
+  
+  .name-item {
+    flex: 1 0 20%; 
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .name-item:hover {
+    background-color: #f0f0f0;
+  }
+  

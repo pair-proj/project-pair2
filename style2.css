@@ -14,20 +14,23 @@ html {
 
 .game-board {
   display: grid;
-  grid-template-columns: repeat(30, 1fr); /* Updated to 30 columns */
+  grid-template-columns: repeat(30, 1fr);
   grid-template-rows: repeat(10, 1fr);
   width: 100vw;
   height: 100vh;
   border-bottom: 15px solid rgb(35, 160, 35);
   position: relative;
-  background: linear-gradient(#87ceeb, #e0f6ff);
+  background-image: url("img/rbk.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: center;
 }
 
 .pipe {
-  grid-column: 31 / 32; 
+  grid-column: 31 / 32;
   grid-row: 10 / 11;
   width: 80px;
-  background: url("img/pipe.png") no-repeat bottom;
+  background: url("img/hamza1.png") no-repeat bottom;
   background-size: contain;
 }
 
@@ -35,8 +38,9 @@ html {
   grid-column: 2 / 3;
   grid-row: 10 / 11;
   width: 150px;
-  background: url("img/mario.gif") no-repeat bottom;
-  background-size: contain;
+
+  background-repeat: no-repeat;
+  background: url("");
 }
 
 .highest-Score {
@@ -77,27 +81,27 @@ html {
 }
 
 .bird {
-  grid-column: 16 / 17; 
+  grid-column: 16 / 17;
   grid-row: 6 / 7;
   width: 100px;
   height: 100px;
-  background: url("./img/du0i1k2io4j6iveqeul81b2nme.png") no-repeat center;
+  background: url("./img/real\ pin.png") no-repeat center;
   background-size: contain;
 }
 
 .pipe2 {
-  grid-column: 21 / 22; 
-  grid-row: 8 / 11; 
+  grid-column: 21 / 22;
+  grid-row: 8 / 11;
   width: 80px;
-  background: url("./img/pipe.png") no-repeat bottom;
+  background: url("./img/hamza1.png") no-repeat bottom;
   background-size: contain;
 }
 
 .pipe3 {
-  grid-column: 21 / 22; 
+  grid-column: 21 / 22;
   grid-row: 7 / 11;
   width: 80px;
-  background: url("img/pipe.png") no-repeat bottom;
+  background: url("img/taxi.png") no-repeat bottom;
   background-size: contain;
 }
 
@@ -105,8 +109,6 @@ html {
   grid-column: 25 / 26;
   grid-row: 4 / 5;
   width: 80px;
-  background: url("img/coin.png") no-repeat bottom;
+  background: url("./img/JavaScript-logo.png") no-repeat bottom;
   background-size: contain;
 }
-
-
