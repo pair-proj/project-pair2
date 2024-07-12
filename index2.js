@@ -1,3 +1,11 @@
+document.addEventListener("DOMContentLoaded", function () {
+  var Image = localStorage.getItem("selectedImage");
+
+  var mario = document.querySelector(".mario");
+  mario.style.background = `url(${Image}) no-repeat`;
+  mario.style.backgroundSize = `contain`;
+});
+
 var gameBoard = document.querySelector(".game-board");
 var mario = document.createElement("div");
 mario.classList.add("mario");
@@ -27,7 +35,8 @@ var scoreDom = document.querySelector(".score span");
 var highestScoreDom = document.querySelector(".highest-Score span");
 
 var jumpaudio = new Audio("./img/mario_jump.mp3");
-var deathaudio = new Audio("./img/deadmario.mp3");
+var coinAudio = new Audio("./img/5mis.m4a");
+var deathaudio = new Audio("./img/out.m4a");
 
 var grid = [];
 var rows = 10;
@@ -155,6 +164,14 @@ function startGame() {
       coinPosition.col === marioPosition.col &&
       coinPosition.row === marioPosition.row
     ) {
+      mario.style.width = "500px";
+      mario.style.height = "500px";
+      setTimeout(() => {
+        mario.style.width = "150px";
+        mario.style.height = "150px";
+      }, 1000);
+
+      coinAudio.play();
       updateScore(10);
       coin.style.display = "none";
 
